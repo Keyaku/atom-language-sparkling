@@ -1,0 +1,9 @@
+{
+  "name": "language-sparkling",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for Sparkling",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  }
+}
