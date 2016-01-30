@@ -1,0 +1,10 @@
+'scopeName': 'source.spn'  
+'name': 'Sparkling'  
+'fileTypes': ['spn']
+'firstLineMatch': '\\A#!.*?\\spn\\b'
+'patterns': [  
+  {
+    'match': '\\b(?i:(0x\\h*))'
+    'name': 'constant.numeric.integer.hexadecimal.python'
+  }
+]
