@@ -1,10 +1,40 @@
-'scopeName': 'source.spn'  
-'name': 'Sparkling'  
+'comment': 'Sparkling Syntax Highlighting'
+'name': 'Sparkling'
+'scopeName': 'source.spn'
 'fileTypes': ['spn']
 'firstLineMatch': '\\A#!.*?\\spn\\b'
-'patterns': [  
-  {
-    'match': '\\b(?i:(0x\\h*))'
-    'name': 'constant.numeric.integer.hexadecimal.python'
-  }
+'patterns': [
+    {   # Keyword control
+      'match': '\\b(and|break|continue|do|else|extern|false|fn|let|nil|not|or|return|true|typeof|while)\\b'
+      'name': 'keyword.control.spn'
+    }
+    {   # Constants
+      'match': '(?<![^.]\\.|:)\\b(false|nil|true)\\b|(?<![.])\\.{3}(?!\\.)'
+      'name': 'constant.language.spn'
+    }
+    {   # Expressions, operators, etc
+      'match': '\\+\\+|--|\\+|-|\\*|\\/|(?<!\\.)\\.{2}(?!\\.)|=|\\+=|-=|*=|/=|..=|&=|=|^=|<<=|>>=|==?|~=|<=?|>=?|\\^|\\||&'
+      'name': 'keyword.operator.spn'
+    }
+    {   # Function declaration
+        'captures':
+            '1':
+                'name': 'keyword.control.spn'
+            '2':
+                'name': 'entity.name.function.scope.spn'
+            '3':
+                'name': 'entity.name.function.spn'
+            '4':
+                'name': 'punctuation.definition.parameters.begin.spn'
+            '5':
+                'name': 'variable.parameter.function.spn'
+            '6':
+                'name': 'punctuation.definition.parameters.end.spn'
+        'match': '\\b(fn)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
+        'name': 'meta.function.spn'
+    }
+    {
+      'match': '(?<![^.]\\.|:)\\b(self)\\b'
+      'name': 'variable.language.self.spn'
+    }
 ]

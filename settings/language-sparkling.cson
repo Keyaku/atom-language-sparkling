@@ -1,0 +1,5 @@
+'.source.spn':
+	'editor':
+		'commentStart': '(#|//)'
+		'increaseIndentPattern': '\\b(\\{|else|fn|do)\\b((?!\\}).)*$|\\{\\s*$'
+		'decreaseIndentPattern': '^\\s*(else|\\}?).*$'
