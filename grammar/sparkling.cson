@@ -2,19 +2,19 @@
 'name': 'Sparkling'
 'scopeName': 'source.spn'
 'fileTypes': ['spn']
-'firstLineMatch': '\\A#!.*?\\spn\\b'
+'firstLineMatch': '\\A#!.*?\\bspn\\b'
 'patterns': [
     {   # Keyword control
       'match': '\\b(and|break|continue|do|else|extern|false|fn|let|nil|not|or|return|true|typeof|while)\\b'
       'name': 'keyword.control.spn'
     }
-    {   # Constants
-      'match': '(?<![^.]\\.|:)\\b(false|nil|true)\\b|(?<![.])\\.{3}(?!\\.)'
+    {   # Constants (have to check if Sparkling supports ellipsis)
+      'match': '\\b(false|nil|true)\\b|(?<![.])\\.{3}(?!\\.)'
       'name': 'constant.language.spn'
     }
-    {   # Expressions, operators, etc
-      'match': '\\+\\+|--|\\+|-|\\*|\\/|(?<!\\.)\\.{2}(?!\\.)|=|\\+=|-=|*=|/=|..=|&=|=|^=|<<=|>>=|==?|~=|<=?|>=?|\\^|\\||&'
-      'name': 'keyword.operator.spn'
+    {   # Expressions (in this case, just typeof)
+      'match': 'typeof'
+      'name': 'keyword.expression.spn'
     }
     {   # Function declaration
         'captures':
@@ -36,5 +36,9 @@
     {
       'match': '(?<![^.]\\.|:)\\b(self)\\b'
       'name': 'variable.language.self.spn'
+    }
+    {
+      'match': '(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+      'name': 'constant.numeric.spn'
     }
 ]

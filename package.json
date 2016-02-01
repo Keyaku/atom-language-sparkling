@@ -1,9 +1,23 @@
 {
     "name": "language-sparkling",
-    "version": "0.0.1",
-    "description": "Syntax highlighting for Sparkling",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Atom Syntax highlighter for Sparkling scripting language",
+    "dependencies": {},
+    "author": {
+      "name": "Keyaku"
+    },
+    "bugs": {
+      "url": "https://github.com/Keyaku/language-sparkling/issues"
+    },
+    "homepage": "https://github.com/Keyaku/language-sparkling",
     "engines": {
-        "atom": "*",
-        "node": "*"
-    }
+        "atom": ">=0.50.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Keyaku/language-sparkling"
+    },
+    "readmeFilename": "README.md",
+    "license": "MIT"
 }
