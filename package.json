@@ -12,7 +12,7 @@
     },
     "homepage": "https://github.com/Keyaku/language-sparkling",
     "engines": {
-        "atom": ">=0.50.0"
+        "atom": "*"
     },
     "repository": {
       "type": "git",

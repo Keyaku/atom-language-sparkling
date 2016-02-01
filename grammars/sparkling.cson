@@ -1,0 +1,77 @@
+'name': 'Sparkling'
+'comment': 'Sparkling Syntax Highlighting'
+'scopeName': 'source.spn'
+'fileTypes': ['spn']
+'firstLineMatch': '\\A#!.*?\\bspn\\b'
+'patterns': [
+    {   # Comment one-line
+        'begin': '(#|/{2})'
+        'captures':
+            '0':
+                'name': 'punctuation.definition.comment.spn'
+        'end': '\\n'
+        'name': 'comment.line.spn'
+    }
+    {   # Comment block
+      'begin': '/\\*'
+      'captures':
+        '0':
+          'name': 'punctuation.definition.comment.spn'
+      'end': '\\*/'
+      'name': 'comment.block.spn'
+    }
+    {   # Keyword control
+      'match': '\\b(and|break|continue|do|else|extern|fn|for|if|let|not|or|return|sizeof|typeof|while)\\b'
+      'name': 'keyword.control.spn'
+    }
+    {   # Constants (have to check if Sparkling supports ellipsis)
+      'match': '\\b(false|nil|true)\\b|(?<![.])[.]{3}(?![.])'
+      'name': 'constant.language.spn'
+    }
+    {   # Numbers (Digits, Hexadecimal, Octal, Binary, decimal floating-point, decimal in scientific notation)
+      'match': '(?<![\\d.])0x[a-fA-F\\d]+|(?<![\\d.])0o[0-7\\d]+|(?<![\\d.])0b[0-1\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+      'name': 'constant.numeric.spn'
+    }
+    {   # Single Character
+        'match': '\'.*\''
+        'name': 'string.quoted.single.spn'
+        'patterns': [
+            {
+              'match': '\\\\.'
+              'name': 'constant.character.escape.spn'
+            }
+        ]
+    }
+    {   # Strings
+        'begin': '"'
+        'end': '"'
+        'name': 'string.quoted.double.spn'
+        'patterns': [
+            {
+              'match': '\\\\.'
+              'name': 'constant.character.escape.spn'
+            }
+        ]
+    }
+    {   # Function declaration
+        'captures':
+            '1':
+                'name': 'keyword.control.spn'
+            '2':
+                'name': 'entity.name.function.scope.spn'
+            '3':
+                'name': 'entity.name.function.spn'
+            '4':
+                'name': 'punctuation.definition.parameters.begin.spn'
+            '5':
+                'name': 'variable.parameter.function.spn'
+            '6':
+                'name': 'punctuation.definition.parameters.end.spn'
+        'match': '\\b(fn)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
+        'name': 'meta.function.spn'
+    }
+    {
+      'match': '(?<![^.]\\.|:)\\b(self)\\b'
+      'name': 'variable.language.self.spn'
+    }
+]
