@@ -77,14 +77,14 @@
         'name': 'support.function.any-method.spn'
     }
     {   # Object property
-        'match': '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b'
+        'match': '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b(?!\\s*=\\s*(fn))'
         'name': 'variable.other.spn'
     }
     {   # Function declaration ---> let foo = fn() {};
         'captures':
             '1':
                 'name': 'entity.name.function.spn'
-        'match': '(?<=let)\\s+(\\w+)\\s*=\\s*(?=fn)'
+        'match': '(\\w+)\\s*=\\s*(?=fn)'
         'name': 'meta.function.spn'
     }
     {   # Function statement ---> fn foo(){}
