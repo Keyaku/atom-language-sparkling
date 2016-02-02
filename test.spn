@@ -1,0 +1,115 @@
+#!/usr/local/bin/spn
+
+// this is a one-line comment
+
+# this is another type of one-line comment
+
+/* block comments can
+   span several lines
+ */
+
+and, break, continue, do, else, extern, false, fn, for, if, let, nil, not, or, return, true, typeof, while
+
+let i = 10;
+let j;
+
+let i, j;
+let foo = "bar", bar = "quirk";
+
+extern E_SQUARED = exp(2);
+
+extern my_number = 1 + 2, my_string = "foobar";
+
+extern myLibrary = {
+    "foo" : fn {
+    	print("foo");
+    }
+};
+
+10 			// (decimal integer)
+0x3f 		// (hexadecimal integer)
+0o755 		// (octal integer)
+0b01001011 	// (binary integer)
+2.0 		// (decimal floating-point)
+1.1e-2 		// (decimal floating-point in scientific notation)
+
+'a'
+
+"\\      ->      \ "
+"\/      ->      /"
+"\'      ->      '"
+"\"      ->      "
+"\a      ->      bell"
+"\b      ->      backspace"
+"\f      ->      form feed"
+"\n      ->      LF"
+"\r      ->      CR"
+"\t      ->      TAB"
+"\xHH    ->      the character with code HH, where HH denotes
+two hexadecimal digits"
+
+let superObj = {
+    foo : fn (self, n) {
+        print("n = ", n);
+    }
+};
+
+let other = {
+    super : superObj,
+    bar : fn (self, k) {
+        print("k = ", k);
+    }
+};
+
+other.bar(42);
+other.foo(1337);
+
+fn x y -> x + y
+fn (x, y) -> x + y
+fn (x, y) { return x + y; }
+fn add(x, y) {
+    return x + y;
+}
+let add = fn (x, y) {
+    return x + y;
+};
+
+print, printf
+"%%, %[W.P]s, %[+| ][0][W]{d|u|o|x|X|b}, %c, %[+| ][W][.P]{e|f}, %B, *"
+
+stdin, stdout, stderr
+
+fopen, close, getline, read, write, flush, tell, seek, eof, remove, rename, tmpfile, readfile
+
+find, substr, substrto, substrfrom, split, repeat, tolower, toupper, format
+
+sort, find, pfind, bsearch, any, all, slice, join, foreach, reduce, filter, map, insert, inject, erase, concat, push, pop, last, swap, reverse, zipwith
+length
+
+keys, values, zip
+
+round, floor, ceil, min, max, random, isnan, isinf, isfin, isfloat, isint
+fact, binom
+
+can2pol, pol2can
+cplx_add(), cplx_sub(), cplx_mul(), cplx_div()
+cplx_sin(), cplx_cos(), cplx_tan(), cplx_cot()
+cplx_conj()
+
+range
+
+M_E
+M_PI
+M_SQRT2
+M_PHI
+M_NAN       // "Not a Number" value
+M_INF       // positive infinity
+
+getenv, system, assert, time, clock, sleep, utctime, localtime, fmtdate, difftime
+parse, parseexpr, compilestr, exprtofn, compileast
+toint, tofloat, tonumber
+call, apply
+require, dynld
+backtrace, identify
+
+Array, String, HashMap, Function

@@ -24,8 +24,8 @@
       'match': '\\b(and|break|continue|do|else|extern|fn|for|if|let|not|or|return|sizeof|typeof|while)\\b'
       'name': 'keyword.control.spn'
     }
-    {   # Constants (have to check if Sparkling supports ellipsis)
-      'match': '\\b(false|nil|true)\\b|(?<![.])[.]{3}(?![.])'
+    {   # Constants (+ math library)
+      'match': '\\b(false|nil|true|M_E|M_PI|M_SQRT2|M_PHI|M_NAN|M_INF)\\b|(?<![.])[.]{3}(?![.])'
       'name': 'constant.language.spn'
     }
     {   # Numbers (Digits, Hexadecimal, Octal, Binary, decimal floating-point, decimal in scientific notation)
@@ -35,12 +35,6 @@
     {   # Single Character
         'match': '\'.*\''
         'name': 'string.quoted.single.spn'
-        'patterns': [
-            {
-              'match': '\\\\.'
-              'name': 'constant.character.escape.spn'
-            }
-        ]
     }
     {   # Strings
         'begin': '"'
@@ -52,6 +46,10 @@
               'name': 'constant.character.escape.spn'
             }
         ]
+    }
+    {   # Self
+        'match': '(?<![^.]\\.|:)\\b(self)\\b'
+        'name': 'variable.language.self.spn'
     }
     {   # Function declaration
         'captures':
