@@ -73,7 +73,7 @@
         'name': 'support.function.library.spn'
     }
     {   # Object method
-        'match': '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+        'match': '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[(]))'
         'name': 'support.function.any-method.spn'
     }
     {   # Object property
