@@ -64,7 +64,7 @@
         'name': 'support.function.spn'
     }
     {   # stdlib math (same as stdlib global function)
-        'match': 'abs|min|max|range|floor|ceil|round|sgn|hypot|sqrt|cbrt|pow|exp|exp2|exp10|log|log2|log10|sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|deg2rad|rad2deg|random|seed|isfin|isinf|isnan|isfloat|isint|fact|bin|cplx_add|cplx_sub|cplx_mul|cplx_div|cplx_sin|cplx_cos|cplx_tan|cplx_conj|cplx_abs|can2pol|pol2can'
+        'match': '(?<![^.]\\.|:)\\b(abs|min|max|range|floor|ceil|round|sgn|hypot|sqrt|cbrt|pow|exp|exp2|exp10|log|log2|log10|sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|deg2rad|rad2deg|random|seed|isfin|isinf|isnan|isfloat|isint|fact|bin|cplx_add|cplx_sub|cplx_mul|cplx_div|cplx_sin|cplx_cos|cplx_tan|cplx_conj|cplx_abs|can2pol|pol2can)\\b(?=(\\()([^)]*)(\\)))'
         'name': 'support.function.spn'
     }
     {   # stdlib global descriptors (will use same style as constants)
