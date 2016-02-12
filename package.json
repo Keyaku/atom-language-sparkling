@@ -1,6 +1,6 @@
 {
     "name": "language-sparkling",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "private": false,
     "description": "Atom Syntax highlighter for Sparkling scripting language",
     "dependencies": {},
