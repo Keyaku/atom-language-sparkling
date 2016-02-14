@@ -1,3 +1,5 @@
+## 0.3.2 - Added some new string methods
+
 ## 0.3.1 - Fixed major context problem with Math lib
 
 ## 0.3.0 - Added `in` keyword + Math lib methods

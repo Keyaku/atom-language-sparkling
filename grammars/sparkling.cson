@@ -63,7 +63,7 @@
         'match': '(?<![^.]\\.|:)\\b(print|fopen|remove|rename|tmpfile|readfile|zipwith|getenv|system|assert|time|clock|sleep|utctime|localtime|fmtdate|difftime|parse|parseexpr|compilestr|exprtofn|compileast|toint|tofloat|tonumber|call|apply|require|dynld|backtrace|identify)\\b(?=(\\()([^)]*)(\\)))'
         'name': 'support.function.spn'
     }
-    {   # stdlib math (same as stdlib global function)
+    {   # stdlib math (same as stdlib global functions)
         'match': '(?<![^.]\\.|:)\\b(abs|min|max|range|floor|ceil|round|sgn|hypot|sqrt|cbrt|pow|exp|exp2|exp10|log|log2|log10|sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|deg2rad|rad2deg|random|seed|isfin|isinf|isnan|isfloat|isint|fact|bin|cplx_add|cplx_sub|cplx_mul|cplx_div|cplx_sin|cplx_cos|cplx_tan|cplx_conj|cplx_abs|can2pol|pol2can)\\b(?=(\\()([^)]*)(\\)))'
         'name': 'support.function.spn'
     }
@@ -72,7 +72,7 @@
         'name': 'constant.language.spn'
     }
     {   # stdlib methods
-        'match': '(?<=[^.]\\.)\\b(printf|close|getline|read|write|flush|tell|seek|eof|find|substr|substrto|substrfrom|split|repeat|tolower|toupper|format|sort|find|pfind|bsearch|any|all|slice|join|foreach|reduce|filter|map|insert|inject|erase|concat|push|pop|last|swap|reverse|keys|values|zip)\\b(?=(\\()([^)]*)(\\)))'
+        'match': '(?<=[^.]\\.)\\b(printf|close|getline|read|write|flush|tell|seek|eof|find|startswith|endswith|substr|substrto|substrfrom|split|repeat|isalnum|isalpha|isdigit|isxdigit|ispunct|isspace|isgraph|iscntrl|isprint|islower|isupper|tolower|toupper|format|sort|find|pfind|bsearch|any|all|slice|join|foreach|reduce|filter|map|insert|inject|erase|concat|push|pop|last|swap|reverse|keys|values|zip)\\b(?=(\\()([^)]*)(\\)))'
         'name': 'support.function.library.spn'
     }
     {   # Object method
