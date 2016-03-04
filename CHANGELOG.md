@@ -1,3 +1,11 @@
+## 0.4.0 - Added snippets
+- Added a few snippets (work-in-progress)
+- Cosmetic changes with the CoffeeScript grammar
+- Changed Global descriptors' style
+- *Actually* corrected `:` behavior this time (seriously, though)
+- Added my name to License
+- Fixed {} and [] indentation
+
 ## 0.3.2 - Added some new string methods
 
 ## 0.3.1 - Fixed major context problem with Math lib

@@ -1,110 +1,110 @@
-'name': 'Sparkling'
-'comment': 'Sparkling Syntax Highlighting'
-'scopeName': 'source.spn'
-'fileTypes': ['spn']
-'firstLineMatch': '\\A#!.*?\\bspn\\b'
-'patterns': [
+name: 'Sparkling'
+comment: 'Sparkling Syntax Highlighting'
+scopeName: 'source.spn'
+fileTypes: ['spn']
+firstLineMatch: '\\A#!.*?\\bspn\\b'
+patterns: [
     {   # Comment one-line
-        'begin': '(#|/{2})'
-        'captures':
+        begin: '(#|/{2})'
+        captures:
             '0':
                 'name': 'punctuation.definition.comment.spn'
-        'end': '\\n'
-        'name': 'comment.line.spn'
+        end: '\\n'
+        name: 'comment.line.spn'
     }
     {   # Comment block
-      'begin': '/\\*'
-      'captures':
+      begin: '/\\*'
+      captures:
         '0':
-          'name': 'punctuation.definition.comment.spn'
-      'end': '\\*/'
-      'name': 'comment.block.spn'
+          name: 'punctuation.definition.comment.spn'
+      end: '\\*/'
+      name: 'comment.block.spn'
     }
     {   # Keyword control
-      'match': '\\b(and|break|continue|do|else|extern|fn|for|if|in|let|not|or|return|sizeof|typeof|while)\\b'
-      'name': 'keyword.control.spn'
+      match: '\\b(and|break|continue|do|else|extern|fn|for|if|in|let|not|or|return|sizeof|typeof|while)\\b'
+      name: 'keyword.control.spn'
     }
     {   # Constants (+ math library)
-      'match': '\\b(false|nil|true|M_E|M_PI|M_SQRT2|M_PHI|M_NAN|M_INF)\\b|(?<![.])[.]{3}(?![.])'
-      'name': 'constant.language.spn'
+      match: '\\b(false|nil|true|M_E|M_PI|M_SQRT2|M_PHI|M_NAN|M_INF)\\b|(?<![.])[.]{3}(?![.])'
+      name: 'constant.language.spn'
     }
     {   # Numbers (Digits, Hexadecimal, Octal, Binary, decimal floating-point, decimal in scientific notation)
-      'match': '(?<![\\d.])0x[a-fA-F\\d]+|(?<![\\d.])0o[0-7\\d]+|(?<![\\d.])0b[0-1\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
-      'name': 'constant.numeric.spn'
+      match: '(?<![\\d.])0x[a-fA-F\\d]+|(?<![\\d.])0o[0-7\\d]+|(?<![\\d.])0b[0-1\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+      name: 'constant.numeric.spn'
     }
     {   # Single Character
-        'match': '\'.*\''
-        'name': 'string.quoted.single.spn'
+        match: '\'.*\''
+        name: 'string.quoted.single.spn'
     }
     {   # Strings
-        'begin': '"'
-        'end': '"'
-        'name': 'string.quoted.double.spn'
-        'patterns': [
+        begin: '"'
+        end: '"'
+        name: 'string.quoted.double.spn'
+        patterns: [
             {   # Character escapes
-                'match': '\\\\.'
-                'name': 'constant.character.escape.spn'
+                match: '\\\\.'
+                name: 'constant.character.escape.spn'
             }
             {   # String format (for printf)
-                'match': '%(\\d*?(\\.\\d*)?)?[scduoefxXbB%]'
-                'name': 'constant.other.placeholder.spn'
+                match: '%(\\d*?(\\.\\d*)?)?[scduoefxXbB%]'
+                name: 'constant.other.placeholder.spn'
             }
         ]
     }
     {   # Self & Super
-        'match': '(?<![^.]\\.|:)\\b(self|super)\\b'
-        'name': 'variable.language.self.spn'
+        match: '(?<![^.]\\.|:)\\b(self|super)\\b'
+        name: 'variable.language.self.spn'
     }
     {   # Hashmap key
-        'match': '(?<![^?]\\?)\\w+(?=\\s*:)'
-        'name': 'string.spn'
+        match: '(?<![^?]\\?)\\w+(?=\\s*[:](?!:))'
+        name: 'string.spn'
     }
     {   # stdlib global functions
-        'match': '(?<![^.]\\.|:)\\b(print|fopen|remove|rename|tmpfile|readfile|zipwith|getenv|system|assert|time|clock|sleep|utctime|localtime|fmtdate|difftime|parse|parseexpr|compilestr|exprtofn|compileast|toint|tofloat|tonumber|call|apply|require|dynld|backtrace|identify)\\b(?=(\\()([^)]*)(\\)))'
-        'name': 'support.function.spn'
+        match: '(?<![^.]\\.|:)\\b(print|fopen|remove|rename|tmpfile|readfile|zipwith|getenv|system|assert|time|clock|sleep|utctime|localtime|fmtdate|difftime|parse|parseexpr|compilestr|exprtofn|compileast|toint|tofloat|tonumber|call|apply|require|dynld|backtrace|identify)\\b(?=(\\()([^)]*)(\\)))'
+        name: 'support.function.spn'
     }
     {   # stdlib math (same as stdlib global functions)
-        'match': '(?<![^.]\\.|:)\\b(abs|min|max|range|floor|ceil|round|sgn|hypot|sqrt|cbrt|pow|exp|exp2|exp10|log|log2|log10|sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|deg2rad|rad2deg|random|seed|isfin|isinf|isnan|isfloat|isint|fact|bin|cplx_add|cplx_sub|cplx_mul|cplx_div|cplx_sin|cplx_cos|cplx_tan|cplx_conj|cplx_abs|can2pol|pol2can)\\b(?=(\\()([^)]*)(\\)))'
-        'name': 'support.function.spn'
+        match: '(?<![^.]\\.|:)\\b(abs|min|max|range|floor|ceil|round|sgn|hypot|sqrt|cbrt|pow|exp|exp2|exp10|log|log2|log10|sin|cos|tan|sinh|cosh|tanh|asin|acos|atan|atan2|deg2rad|rad2deg|random|seed|isfin|isinf|isnan|isfloat|isint|fact|bin|cplx_add|cplx_sub|cplx_mul|cplx_div|cplx_sin|cplx_cos|cplx_tan|cplx_conj|cplx_abs|can2pol|pol2can)\\b(?=(\\()([^)]*)(\\)))'
+        name: 'support.function.spn'
     }
     {   # stdlib global descriptors (will use same style as constants)
-        'match': '(?<![^.]\\.|:)\\b(Array|String|HashMap|Function|stdin|stdout|stderr)\\b'
-        'name': 'constant.language.spn'
+        match: '(?<![^.]\\.|:)\\b(Array|String|HashMap|Function|stdin|stdout|stderr)\\b'
+        name: 'entity.name.type.class.spn'
     }
     {   # stdlib methods
-        'match': '(?<=[^.]\\.)\\b(printf|close|getline|read|write|flush|tell|seek|eof|find|startswith|endswith|substr|substrto|substrfrom|split|repeat|isalnum|isalpha|isdigit|isxdigit|ispunct|isspace|isgraph|iscntrl|isprint|islower|isupper|tolower|toupper|format|sort|find|pfind|bsearch|any|all|slice|join|foreach|reduce|filter|map|insert|inject|erase|concat|push|pop|last|swap|reverse|keys|values|zip)\\b(?=(\\()([^)]*)(\\)))'
-        'name': 'support.function.library.spn'
+        match: '(?<=[^.]\\.)\\b(printf|close|getline|read|write|flush|tell|seek|eof|find|startswith|endswith|substr|substrto|substrfrom|split|repeat|isalnum|isalpha|isdigit|isxdigit|ispunct|isspace|isgraph|iscntrl|isprint|islower|isupper|tolower|toupper|format|sort|find|pfind|bsearch|any|all|slice|join|foreach|reduce|filter|map|insert|inject|erase|concat|push|pop|last|swap|reverse|keys|values|zip)\\b(?=(\\()([^)]*)(\\)))'
+        name: 'support.function.library.spn'
     }
     {   # Object method
-        'match': '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[(]))'
-        'name': 'support.function.any-method.spn'
+        match: '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[(]))'
+        name: 'support.function.any-method.spn'
     }
     {   # Object property
-        'match': '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b(?!\\s*=\\s*(fn))'
-        'name': 'variable.other.spn'
+        match: '(?<=[^.]\\.)\\b([A-Za-z_]\\w*)\\b(?!\\s*=\\s*(fn))'
+        name: 'variable.other.spn'
     }
     {   # Function declaration ---> let foo = fn() {};
-        'captures':
+        captures:
             '1':
-                'name': 'entity.name.function.spn'
-        'match': '(\\w+)\\s*=\\s*(?=fn)'
-        'name': 'meta.function.spn'
+                name: 'entity.name.function.spn'
+        match: '(\\w+)\\s*=\\s*(?=fn)'
+        name: 'meta.function.spn'
     }
     {   # Function statement ---> fn foo(){}
-        'captures':
+        captures:
             '1':
-                'name': 'keyword.control.spn'
+                name: 'keyword.control.spn'
             '2':
-                'name': 'entity.name.function.scope.spn'
+                name: 'entity.name.function.scope.spn'
             '3':
-                'name': 'entity.name.function.spn'
+                name: 'entity.name.function.spn'
             '4':
-                'name': 'punctuation.definition.parameters.begin.spn'
+                name: 'punctuation.definition.parameters.begin.spn'
             '5':
-                'name': 'variable.parameter.function.spn'
+                name: 'variable.parameter.function.spn'
             '6':
-                'name': 'punctuation.definition.parameters.end.spn'
-        'match': '\\b(fn)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
-        'name': 'meta.function.spn'
+                name: 'punctuation.definition.parameters.end.spn'
+        match: '\\b(fn)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
+        name: 'meta.function.spn'
     }
 ]
