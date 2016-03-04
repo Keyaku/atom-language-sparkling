@@ -8,29 +8,29 @@ patterns: [
         begin: '(#|/{2})'
         captures:
             '0':
-                'name': 'punctuation.definition.comment.spn'
+                name: 'punctuation.definition.comment.spn'
         end: '\\n'
         name: 'comment.line.spn'
     }
     {   # Comment block
-      begin: '/\\*'
-      captures:
-        '0':
-          name: 'punctuation.definition.comment.spn'
-      end: '\\*/'
-      name: 'comment.block.spn'
+        begin: '/\\*'
+        captures:
+            '0':
+                name: 'punctuation.definition.comment.spn'
+        end: '\\*/'
+        name: 'comment.block.spn'
     }
     {   # Keyword control
-      match: '\\b(and|break|continue|do|else|extern|fn|for|if|in|let|not|or|return|sizeof|typeof|while)\\b'
-      name: 'keyword.control.spn'
+        match: '\\b(and|break|continue|do|else|extern|fn|for|if|in|let|not|or|return|sizeof|typeof|while)\\b'
+        name: 'keyword.control.spn'
     }
     {   # Constants (+ math library)
-      match: '\\b(false|nil|true|M_E|M_PI|M_SQRT2|M_PHI|M_NAN|M_INF)\\b|(?<![.])[.]{3}(?![.])'
-      name: 'constant.language.spn'
+        match: '\\b(false|nil|true|M_E|M_PI|M_SQRT2|M_PHI|M_NAN|M_INF)\\b|(?<![.])[.]{3}(?![.])'
+        name: 'constant.language.spn'
     }
     {   # Numbers (Digits, Hexadecimal, Octal, Binary, decimal floating-point, decimal in scientific notation)
-      match: '(?<![\\d.])0x[a-fA-F\\d]+|(?<![\\d.])0o[0-7\\d]+|(?<![\\d.])0b[0-1\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
-      name: 'constant.numeric.spn'
+        match: '(?<![\\d.])0x[a-fA-F\\d]+|(?<![\\d.])0o[0-7\\d]+|(?<![\\d.])0b[0-1\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+        name: 'constant.numeric.spn'
     }
     {   # Single Character
         match: '\'.*\''

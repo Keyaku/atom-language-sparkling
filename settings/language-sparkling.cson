@@ -1,4 +1,4 @@
 '.source.spn':
-	'editor':
-		'increaseIndentPattern': '(\\{|\\[).*$'
-		'decreaseIndentPattern': '^\\s*(\\}|\\])$'
+	editor:
+		increaseIndentPattern: '(\\{|\\[)\\s*$'
+		decreaseIndentPattern: '^\\s*(\\}|\\])$'

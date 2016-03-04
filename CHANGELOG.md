@@ -1,3 +1,5 @@
+## 0.4.1 - Minor indentation fix
+
 ## 0.4.0 - Added snippets
 - Added a few snippets (work-in-progress)
 - Cosmetic changes with the CoffeeScript grammar
