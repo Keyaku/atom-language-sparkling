@@ -3,255 +3,255 @@
 
 '.source.spn':
     'multiline comment':
-        'prefix': '/*'
-        'body': '/* ${0:comment...} */'
+        prefix: '/*'
+        body: '/* ${0:comment...} */'
     'return':
-        'prefix': 'return'
-        'body': 'return'
+        prefix: 'return'
+        body: 'return'
     'constant':
-        'prefix': 'extern'
-        'body': 'extern ${0:constant};'
+        prefix: 'extern'
+        body: 'extern ${0:constant};'
     'require':
-        'prefix': 'require'
-        'body': 'require(${value});'
+        prefix: 'require'
+        body: 'require(${0:value});'
     'function statement':
-        'prefix': 'fn '
-        'body': 'fn ${1:funcName}(${2:args}) \{\n\t${0:}\n\}'
+        prefix: 'fn '
+        body: 'fn ${1:funcName}(${2:args}) \{\n\t${0:}\n\}'
     'for loop':
-        'prefix': 'for'
-        'body': 'for ${1:declaration}; ${2:condition}; ${3:step} \{\n\t${0:}\n\}'
+        prefix: 'for'
+        body: 'for ${1:declaration}; ${2:condition}; ${3:step} \{\n\t${0:}\n\}'
     'while loop':
-        'prefix': 'while'
-        'body': 'while ${1:condition} \{\n\t${0:}\n\}'
+        prefix: 'while'
+        body: 'while ${1:condition} \{\n\t${0:}\n\}'
     'do while loop':
-        'prefix': 'do'
-        'body': 'do \{\n\t${0:}\n\} while ${1:condition};'
+        prefix: 'do'
+        body: 'do \{\n\t${0:}\n\} while ${1:condition};'
     'if condition':
-        'prefix': 'if'
-        'body': 'if ${1:condition} \{\n\t${0:}\n\}'
+        prefix: 'if'
+        body: 'if ${1:condition} \{\n\t${0:}\n\}'
 
     # Standard Library
     # I/O functions
     'print':
-        'prefix': 'print'
-        'body': 'print(${0:})'
+        prefix: 'print'
+        body: 'print(${0:})'
     'fopen':
-        'prefix': 'fopen'
-        'body': 'fopen(${0:name}, ${1:mode})'
+        prefix: 'fopen'
+        body: 'fopen(${0:name}, ${1:mode})'
     'close':
-        'prefix': 'close'
-        'body': 'close()'
+        prefix: 'close'
+        body: 'close()'
     'printf':
-        'prefix': 'printf'
-        'body': 'printf(${0:format}, ${1:…})'
+        prefix: 'printf'
+        body: 'printf(${0:format}, ${1:…})'
     'getline':
-        'prefix': 'getline'
-        'body': 'getline()'
+        prefix: 'getline'
+        body: 'getline()'
     'read':
-        'prefix': 'read'
-        'body': 'read(${0:length})'
+        prefix: 'read'
+        body: 'read(${0:length})'
     'write':
-        'prefix': 'write'
-        'body': 'write(${0:buffer})'
+        prefix: 'write'
+        body: 'write(${0:buffer})'
     'flush':
-        'prefix': 'flush'
-        'body': 'flush()'
+        prefix: 'flush'
+        body: 'flush()'
     'tell':
-        'prefix': 'tell'
-        'body': 'tell()'
+        prefix: 'tell'
+        body: 'tell()'
     'seek':
-        'prefix': 'seek'
-        'body': 'seek(${0:offset}, ${1:whence})'
+        prefix: 'seek'
+        body: 'seek(${0:offset}, ${1:whence})'
     'eof':
-        'prefix': 'eof'
-        'body': 'eof()'
+        prefix: 'eof'
+        body: 'eof()'
     'remove':
-        'prefix': 'remove'
-        'body': 'remove(${0:filename})'
+        prefix: 'remove'
+        body: 'remove(${0:filename})'
     'rename':
-        'prefix': 'rename'
-        'body': 'rename(${0:old}, ${1:new})'
+        prefix: 'rename'
+        body: 'rename(${0:old}, ${1:new})'
     'tmpfile':
-        'prefix': 'tmpfile'
-        'body': 'tmpfile()'
+        prefix: 'tmpfile'
+        body: 'tmpfile()'
     'write':
-        'prefix': 'write'
-        'body': 'write(${0:buffer})'
+        prefix: 'write'
+        body: 'write(${0:buffer})'
 
     # String manipulation
     'string find':
-        'prefix': 'find'
-        'body': 'find(${0:needle})'
+        prefix: 'find'
+        body: 'find(${0:needle})'
     'string find w/ offset':
-        'prefix': 'find'
-        'body': 'find(${0:needle}, ${1:offset})'
+        prefix: 'find'
+        body: 'find(${0:needle}, ${1:offset})'
     'startswith':
-        'prefix': 'startswith'
-        'body': 'startswith(${0:needle})'
+        prefix: 'startswith'
+        body: 'startswith(${0:needle})'
     'endswith':
-        'prefix': 'endswith'
-        'body': 'endswith(${0:needle})'
+        prefix: 'endswith'
+        body: 'endswith(${0:needle})'
     'substr':
-        'prefix': 'substr'
-        'body': 'substr(${0:offset}, ${1:length})'
+        prefix: 'substr'
+        body: 'substr(${0:offset}, ${1:length})'
     'substrto':
-        'prefix': 'substrto'
-        'body': 'substrto(${0:length})'
+        prefix: 'substrto'
+        body: 'substrto(${0:length})'
     'substrfrom':
-        'prefix': 'substrfrom'
-        'body': 'substrfrom(${0:offset})'
+        prefix: 'substrfrom'
+        body: 'substrfrom(${0:offset})'
     'split':
-        'prefix': 'split'
-        'body': 'split(${0:separator})'
+        prefix: 'split'
+        body: 'split(${0:separator})'
     'repeat':
-        'prefix': 'repeat'
-        'body': 'repeat(${0:n})'
+        prefix: 'repeat'
+        body: 'repeat(${0:n})'
     'isalnum':
-        'prefix': 'isalnum'
-        'body': 'isalnum()'
+        prefix: 'isalnum'
+        body: 'isalnum()'
     'isalpha':
-        'prefix': 'isalpha'
-        'body': 'isalpha()'
+        prefix: 'isalpha'
+        body: 'isalpha()'
     'isdigit':
-        'prefix': 'isdigit'
-        'body': 'isdigit()'
+        prefix: 'isdigit'
+        body: 'isdigit()'
     'isxdigit':
-        'prefix': 'isxdigit'
-        'body': 'isxdigit()'
+        prefix: 'isxdigit'
+        body: 'isxdigit()'
     'ispunct':
-        'prefix': 'ispunct'
-        'body': 'ispunct()'
+        prefix: 'ispunct'
+        body: 'ispunct()'
     'isgraph':
-        'prefix': 'isgraph'
-        'body': 'isgraph()'
+        prefix: 'isgraph'
+        body: 'isgraph()'
     'iscntrl':
-        'prefix': 'iscntrl'
-        'body': 'iscntrl()'
+        prefix: 'iscntrl'
+        body: 'iscntrl()'
     'isprint':
-        'prefix': 'isprint'
-        'body': 'isprint()'
+        prefix: 'isprint'
+        body: 'isprint()'
     'isspace':
-        'prefix': 'isspace'
-        'body': 'isspace()'
+        prefix: 'isspace'
+        body: 'isspace()'
     'islower':
-        'prefix': 'islower'
-        'body': 'islower()'
+        prefix: 'islower'
+        body: 'islower()'
     'isupper':
-        'prefix': 'isupper'
-        'body': 'isupper()'
+        prefix: 'isupper'
+        body: 'isupper()'
     'tolower':
-        'prefix': 'tolower'
-        'body': 'tolower()'
+        prefix: 'tolower'
+        body: 'tolower()'
     'toupper':
-        'prefix': 'toupper'
-        'body': 'toupper()'
+        prefix: 'toupper'
+        body: 'toupper()'
     'format':
-        'prefix': 'format'
-        'body': 'format(${0:})'
+        prefix: 'format'
+        body: 'format(${0:})'
 
     # Array handling
     'sort':
-        'prefix': 'sort'
-        'body': 'sort()'
+        prefix: 'sort'
+        body: 'sort()'
     'sort w/ comparator':
-        'prefix': 'sort'
-        'body': 'sort(${0:comparator})'
+        prefix: 'sort'
+        body: 'sort(${0:comparator})'
     'array find':
-        'prefix': 'find'
-        'body': 'find(${0:element})'
+        prefix: 'find'
+        body: 'find(${0:element})'
     'array pfind':
-        'prefix': 'pfind'
-        'body': 'pfind(${0:predicate})'
+        prefix: 'pfind'
+        body: 'pfind(${0:predicate})'
     'bsearch':
-        'prefix': 'bsearch'
-        'body': 'bsearch(${0:element})'
+        prefix: 'bsearch'
+        body: 'bsearch(${0:element})'
     'bsearch w/ comparator':
-        'prefix': 'bsearch'
-        'body': 'bsearch(${0:element}, ${1:comparator})'
+        prefix: 'bsearch'
+        body: 'bsearch(${0:element}, ${1:comparator})'
     'any':
-        'prefix': 'any'
-        'body': 'any(${0:predicate})'
+        prefix: 'any'
+        body: 'any(${0:predicate})'
     'all':
-        'prefix': 'all'
-        'body': 'all(${0:predicate})'
+        prefix: 'all'
+        body: 'all(${0:predicate})'
     'slice':
-        'prefix': 'slice'
-        'body': 'slice(${0:start})'
+        prefix: 'slice'
+        body: 'slice(${0:start})'
     'slice w/ length':
-        'prefix': 'slice'
-        'body': 'slice(${0:start}, ${1:length})'
+        prefix: 'slice'
+        body: 'slice(${0:start}, ${1:length})'
     'join':
-        'prefix': 'join'
-        'body': 'join(${0:separator})'
+        prefix: 'join'
+        body: 'join(${0:separator})'
     'reduce':
-        'prefix': 'reduce'
-        'body': 'reduce(${0:identity}, ${1:calback(first, second)})'
+        prefix: 'reduce'
+        body: 'reduce(${0:identity}, ${1:calback(first, second)})'
     'insert':
-        'prefix': 'insert'
-        'body': 'insert(${0:element}, ${1:index})'
+        prefix: 'insert'
+        body: 'insert(${0:element}, ${1:index})'
     'inject':
-        'prefix': 'inject'
-        'body': 'inject(${0:needle})'
+        prefix: 'inject'
+        body: 'inject(${0:needle})'
     'inject w/ index':
-        'prefix': 'inject'
-        'body': 'inject(${0:needle}, ${1:index})'
+        prefix: 'inject'
+        body: 'inject(${0:needle}, ${1:index})'
     'erase':
-        'prefix': 'erase'
-        'body': 'erase(${0:index})'
+        prefix: 'erase'
+        body: 'erase(${0:index})'
     'concat':
-        'prefix': 'concat'
-        'body': 'concat(${0:})'
+        prefix: 'concat'
+        body: 'concat(${0:})'
     'push':
-        'prefix': 'push'
-        'body': 'push(${0:element})'
+        prefix: 'push'
+        body: 'push(${0:element})'
     'pop':
-        'prefix': 'pop'
-        'body': 'pop()'
+        prefix: 'pop'
+        body: 'pop()'
     'last':
-        'prefix': 'last'
-        'body': 'last()'
+        prefix: 'last'
+        body: 'last()'
     'swap':
-        'prefix': 'swap'
-        'body': 'swap(${0:index1}, ${1:index2})'
+        prefix: 'swap'
+        body: 'swap(${0:index1}, ${1:index2})'
     'reverse':
-        'prefix': 'reverse'
-        'body': 'reverse()'
+        prefix: 'reverse'
+        body: 'reverse()'
     'zipwith':
-        'prefix': 'zipwith'
-        'body': 'zipwith(${0:seq1}, ${1:seq2}, ${2:transform})'
+        prefix: 'zipwith'
+        body: 'zipwith(${0:seq1}, ${1:seq2}, ${2:transform})'
 
     # Hashmaps
     'keys':
-        'prefix': 'keys'
-        'body': 'keys()'
+        prefix: 'keys'
+        body: 'keys()'
     'values':
-        'prefix': 'values'
-        'body': 'values()'
+        prefix: 'values'
+        body: 'values()'
     'zip':
-        'prefix': 'zip'
-        'body': 'zip(${0:keys}, ${1:values})'
+        prefix: 'zip'
+        body: 'zip(${0:keys}, ${1:values})'
 
 
     # Array & Hashmaps
     'foreach':
-        'prefix': 'foreach'
-        'body': 'foreach(${0:callback})'
+        prefix: 'foreach'
+        body: 'foreach(${0:callback})'
     'filter':
-        'prefix': 'filter'
-        'body': 'filter(${0:predicate(value, index)})'
+        prefix: 'filter'
+        body: 'filter(${0:predicate(value, index)})'
     'map':
-        'prefix': 'map'
-        'body': 'map(${0:predicate(value, index)})'
+        prefix: 'map'
+        body: 'map(${0:predicate(value, index)})'
 
     # Math functions
     'range':
-        'prefix': 'range'
-        'body': 'range(${0:n})'
+        prefix: 'range'
+        body: 'range(${0:n})'
     'range':
-        'prefix': 'range'
-        'body': 'range(${0:begin}, ${1:end})'
+        prefix: 'range'
+        body: 'range(${0:begin}, ${1:end})'
     'range':
-        'prefix': 'range'
-        'body': 'range(${0:begin}, ${1:end}, ${2:step})'
+        prefix: 'range'
+        body: 'range(${0:begin}, ${1:end}, ${2:step})'
 
     # Shell, OS and Sparkling engine

@@ -72,7 +72,7 @@ patterns: [
         name: 'entity.name.type.class.spn'
     }
     {   # stdlib methods
-        match: '(?<=[^.]\\.)\\b(printf|close|getline|read|write|flush|tell|seek|eof|find|startswith|endswith|substr|substrto|substrfrom|split|repeat|isalnum|isalpha|isdigit|isxdigit|ispunct|isspace|isgraph|iscntrl|isprint|islower|isupper|tolower|toupper|format|sort|find|pfind|bsearch|any|all|slice|join|foreach|reduce|filter|map|insert|inject|erase|concat|push|pop|last|swap|reverse|keys|values|zip)\\b(?=(\\()([^)]*)(\\)))'
+        match: '(?<=[^.]\\.)\\b(print|printf|close|getline|read|write|flush|tell|seek|eof|find|startswith|endswith|substr|substrto|substrfrom|split|repeat|isalnum|isalpha|isdigit|isxdigit|ispunct|isspace|isgraph|iscntrl|isprint|islower|isupper|tolower|toupper|format|sort|find|pfind|bsearch|any|all|slice|join|foreach|reduce|filter|map|insert|inject|erase|concat|push|pop|last|swap|reverse|keys|values|zip)\\b(?=(\\()([^)]*)(\\)))'
         name: 'support.function.library.spn'
     }
     {   # Object method

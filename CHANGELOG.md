@@ -1,3 +1,5 @@
+## 0.4.2 - Layout fixes + print() method
+
 ## 0.4.1 - Minor indentation fix
 
 ## 0.4.0 - Added snippets
